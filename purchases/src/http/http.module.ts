@@ -1,4 +1,7 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 
-@Module({})
-export class HttpModule {}
+@Module({
+  imports: [ConfigModule.forRoot()],
+})
+export class HttpModule { }
