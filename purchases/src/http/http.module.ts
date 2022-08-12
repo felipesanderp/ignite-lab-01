@@ -4,6 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 import path from 'node:path';
 import { PurchasesResolver } from 'src/graphql/resolvers/purchases.resolver';
+import { CustomersService } from 'src/services/customers.service';
 import { ProductsService } from 'src/services/products.service';
 import { PurchasesService } from 'src/services/purchase.service';
 
@@ -22,8 +23,11 @@ import { ProductsResolver } from '../graphql/resolvers/products.resolver';
   providers: [
     ProductsResolver,
     ProductsService,
+
     PurchasesResolver,
     PurchasesService,
+
+    CustomersService,
   ],
 })
-export class HttpModule { }
+export class HttpModule {}
