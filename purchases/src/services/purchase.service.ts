@@ -4,7 +4,7 @@ import { PrismaService } from '../database/prisma/prisma.service';
 
 @Injectable()
 export class PurchasesService {
-  constructor(private prisma: PrismaService) { }
+  constructor(private prisma: PrismaService) {}
 
   listAllPurchases() {
     return this.prisma.purchase.findMany({

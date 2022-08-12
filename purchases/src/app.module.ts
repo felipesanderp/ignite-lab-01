@@ -6,4 +6,4 @@ import { HttpModule } from './http/http.module';
   controllers: [],
   providers: [],
 })
-export class AppModule { }
+export class AppModule {}

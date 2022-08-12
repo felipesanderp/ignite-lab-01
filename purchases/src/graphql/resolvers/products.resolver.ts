@@ -8,7 +8,7 @@ import { CreateProductInput } from '../inputs/create-product-input';
 
 @Resolver(() => Product)
 export class ProductsResolver {
-  constructor(private productsService: ProductsService) { }
+  constructor(private productsService: ProductsService) {}
 
   @Query(() => [Product])
   // @UseGuards(AuthorizationGuard)

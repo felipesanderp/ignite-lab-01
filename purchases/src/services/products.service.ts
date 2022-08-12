@@ -9,7 +9,7 @@ interface CreateProductParams {
 
 @Injectable()
 export class ProductsService {
-  constructor(private prisma: PrismaService) { }
+  constructor(private prisma: PrismaService) {}
 
   listAllProducts() {
     return this.prisma.product.findMany();

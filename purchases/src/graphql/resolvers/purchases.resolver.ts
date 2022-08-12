@@ -19,7 +19,7 @@ export class PurchasesResolver {
   constructor(
     private purchasesService: PurchasesService,
     private productsService: ProductsService,
-  ) { }
+  ) {}
 
   @Query(() => [Purchase])
   @UseGuards(AuthorizationGuard)
