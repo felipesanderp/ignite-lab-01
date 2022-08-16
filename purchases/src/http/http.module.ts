@@ -3,13 +3,15 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 import path from 'node:path';
-import { PurchasesResolver } from 'src/graphql/resolvers/purchases.resolver';
-import { CustomersService } from 'src/services/customers.service';
-import { ProductsService } from 'src/services/products.service';
-import { PurchasesService } from 'src/services/purchase.service';
+
+import { CustomersResolver } from '../graphql/resolvers/customers.resolver';
+import { PurchasesResolver } from '../graphql/resolvers/purchases.resolver';
+import { ProductsResolver } from '../graphql/resolvers/products.resolver';
+import { CustomersService } from '../services/customers.service';
+import { ProductsService } from '../services/products.service';
+import { PurchasesService } from '../services/purchase.service';
 
 import { DatabaseModule } from '../database/database.module';
-import { ProductsResolver } from '../graphql/resolvers/products.resolver';
 
 @Module({
   imports: [
@@ -27,6 +29,7 @@ import { ProductsResolver } from '../graphql/resolvers/products.resolver';
     PurchasesResolver,
     PurchasesService,
 
+    CustomersResolver,
     CustomersService,
   ],
 })
