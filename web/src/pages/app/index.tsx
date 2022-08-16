@@ -1,12 +1,13 @@
-import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0"
+import { getAccessToken, useUser, withPageAuthRequired } from "@auth0/nextjs-auth0"
 
 
 export default function Home() {
-  const { user } = useUser()
+  const { user } = useUser();
 
   return (
     <div>
       <h1>Hello {user?.name}</h1>
+      <span>{user?.sub}</span>
 
       <pre>
         {JSON.stringify(user, null, 2)}
